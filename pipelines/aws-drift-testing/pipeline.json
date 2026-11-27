@@ -1,0 +1,83 @@
+{
+  "id": 4573,
+  "name": "aws-drift-testing",
+  "description": "Pipeline aws-drift-testing version v1",
+  "provider": "aws",
+  "region": "us-east-1",
+  "version": 1,
+  "components": [
+    {
+      "id": "aws-region-1795597721258",
+      "data": {
+        "name": "region-2cot00",
+        "type": "aws-region",
+        "label": "ap-south-1",
+        "config": {
+          "region": "ap-south-1"
+        },
+        "parentId": null,
+        "isTainted": false,
+        "scalingMode": "none",
+        "nestingLevel": 0,
+        "isConfigValid": true,
+        "validationError": false,
+        "deploymentStatus": "destroyed"
+      },
+      "type": "container",
+      "style": {
+        "width": 1200,
+        "height": 900
+      },
+      "position": {
+        "x": 160.01156616210938,
+        "y": 139.26388549804688
+      }
+    },
+    {
+      "id": "aws-lambda-1795599364498",
+      "data": {
+        "name": "AWS-LAMBDA-qm0gfv",
+        "type": "aws-lambda",
+        "scope": "region",
+        "config": {
+          "s3Key": "lambda-nodejs.zip",
+          "vpcId": "vpc-0ef92ef28a449ab3b",
+          "region": "ap-south-1",
+          "handler": "index.handler",
+          "roleArn": "arn:aws:iam::000789386663:role/lambdarole",
+          "runtime": "nodejs20.x",
+          "timeout": 3,
+          "subnetIds": [
+            "subnet-0922ef63a066f3e05"
+          ],
+          "codeSource": "s3",
+          "memorySize": 128,
+          "functionName": "aditya",
+          "architectures": "x86_64",
+          "existingBucket": "bhardwajadi321",
+          "securityGroupIds": [
+            "sg-087178c08236808ce"
+          ],
+          "ephemeralStorageSize": "512",
+          "reservedConcurrentExecutions": -1
+        },
+        "parentId": "aws-region-1795597721258",
+        "nestingLevel": 1,
+        "componentType": "aws-lambda",
+        "isConfigValid": true,
+        "validationError": false,
+        "hasIncompleteConfig": false,
+        "configModifiedByUser": true
+      },
+      "type": "cloudComponent",
+      "style": {},
+      "position": {
+        "x": 463.7619712136009,
+        "y": 315.2462019486861
+      }
+    }
+  ],
+  "connections": [],
+  "publishedAt": "2026-11-27T06:15:41.337Z",
+  "publishedBy": "Aadi"
+}
