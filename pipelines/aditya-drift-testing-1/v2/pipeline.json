@@ -1,0 +1,117 @@
+{
+  "id": 4577,
+  "name": "aws-drift-testing-1",
+  "description": "Pipeline aws-drift-testing-1 version v1",
+  "provider": "aws",
+  "region": "us-east-1",
+  "version": 1,
+  "components": [
+    {
+      "id": "aws-region-1795600780539",
+      "data": {
+        "name": "region-f9epoy",
+        "type": "aws-region",
+        "label": "ap-south-1",
+        "config": {
+          "region": "ap-south-1"
+        },
+        "parentId": null,
+        "isTainted": false,
+        "scalingMode": "none",
+        "nestingLevel": 0,
+        "isConfigValid": true,
+        "deploymentStatus": "success"
+      },
+      "type": "container",
+      "style": {
+        "width": 1200,
+        "height": 900
+      },
+      "position": {
+        "x": 196.01156616210938,
+        "y": 169.26388549804688
+      }
+    },
+    {
+      "id": "aws-dynamodb-1795672319886",
+      "data": {
+        "name": "AWS-DYNAMODB-sj0ors",
+        "type": "aws-dynamodb",
+        "config": {
+          "name": "adityaaa",
+          "tags": {
+            "name": "aaditya"
+          },
+          "region": "ap-south-1",
+          "hashKey": "PK",
+          "tableClass": "STANDARD",
+          "ttlEnabled": true,
+          "billingMode": "PROVISIONED",
+          "hashKeyType": "S",
+          "readCapacity": 1,
+          "streamEnabled": false,
+          "writeCapacity": 1,
+          "ttlAttributeName": "asdfgh",
+          "deletionProtectionEnabled": false,
+          "pointInTimeRecoveryEnabled": false,
+          "serverSideEncryptionEnabled": false
+        },
+        "parentId": "aws-region-1795600780539",
+        "isTainted": false,
+        "scalingMode": "none",
+        "nestingLevel": 1,
+        "componentType": "aws-dynamodb",
+        "isConfigValid": true,
+        "validationError": false,
+        "deploymentStatus": "success",
+        "hasIncompleteConfig": false,
+        "configModifiedByUser": true
+      },
+      "type": "cloudComponent",
+      "style": {},
+      "position": {
+        "x": 574.214413729581,
+        "y": 496.10731367631394
+      }
+    },
+    {
+      "id": "aws-s3-1795757468584",
+      "data": {
+        "name": "AWS-S3-pk3mhb",
+        "type": "aws-s3",
+        "scope": "region",
+        "config": {
+          "awsRegion": "ap-south-1",
+          "bucketName": "bhardwajadi63",
+          "versioning": false,
+          "accesConfig": true,
+          "forceDestroy": true,
+          "encryptionType": "SSE-S3",
+          "blockPublicAcls": true,
+          "ignorePublicAcls": true,
+          "blockPublicPolicy": true,
+          "objectLockEnabled": false,
+          "versioningEnabled": false,
+          "restrictPublicBuckets": true,
+          "serverSideEncryptionAlgorithm": "AES256"
+        },
+        "parentId": "aws-region-1795600780539",
+        "nestingLevel": 1,
+        "componentType": "aws-s3",
+        "isConfigValid": true,
+        "validationError": false,
+        "hasIncompleteConfig": false,
+        "configModifiedByUser": true
+      },
+      "type": "cloudComponent",
+      "style": {},
+      "position": {
+        "x": 483.3053228204901,
+        "y": 710.6527682217685
+      }
+    }
+  ],
+  "connections": [],
+  "publishedAt": "2026-11-27T05:31:45.306Z",
+  "publishedBy": "Aadi"
+}
